@@ -1,0 +1,48 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #486678;
+}
+
+label {
+  font-size: 12px;
+}
+input {
+  display: block;
+  min-width: 300px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  border: 1px solid transparent;
+  &:focus {
+    outline: none;
+    border: 1px solid #486678;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  li {
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 1em;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
